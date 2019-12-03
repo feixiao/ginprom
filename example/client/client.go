@@ -16,7 +16,7 @@ func floodRequest() {
 	client := &http.Client{}
 	endpoints := []string{"/", "/index", "/forbidden", "/badreq"}
 	for {
-		u := fmt.Sprintf("http://localhost:4433%s", endpoints[rand.Int()%4])
+		u := fmt.Sprintf("http://localhost:8080%s", endpoints[rand.Int()%4])
 		req, _ := http.NewRequest(http.MethodGet, u, nil)
 		if _, err := client.Do(req); err != nil {
 			log.Printf("request error: %v", err)
