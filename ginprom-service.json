@@ -15,8 +15,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 7,
-  "iteration": 1569654029911,
+  "id": 1,
+  "iteration": 1596159964434,
   "links": [],
   "panels": [
     {
@@ -170,7 +170,7 @@
       },
       "yaxes": [
         {
-          "format": "short",
+          "format": "reqps",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -341,7 +341,7 @@
       },
       "yaxes": [
         {
-          "format": "short",
+          "format": "Bps",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -428,7 +428,7 @@
       },
       "yaxes": [
         {
-          "format": "short",
+          "format": "s",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -514,7 +514,7 @@
       },
       "yaxes": [
         {
-          "format": "short",
+          "format": "s",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -635,8 +635,9 @@
       {
         "allValue": null,
         "current": {
-          "text": "",
-          "value": ""
+          "selected": true,
+          "text": "mac",
+          "value": "mac"
         },
         "datasource": "$datasource",
         "definition": "label_values(service_http_request_count_total, job)",
@@ -659,6 +660,7 @@
       },
       {
         "current": {
+          "selected": true,
           "text": "Prometheus",
           "value": "Prometheus"
         },
@@ -679,6 +681,7 @@
         "auto_count": 30,
         "auto_min": "10s",
         "current": {
+          "selected": true,
           "text": "1m",
           "value": "1m"
         },
@@ -745,8 +748,9 @@
       {
         "allValue": null,
         "current": {
-          "text": "All",
-          "value": "$__all"
+          "selected": false,
+          "text": "/",
+          "value": "/"
         },
         "datasource": "$datasource",
         "definition": "label_values(service_http_request_count_total{endpoint!~\"/metrics\", status!=\"404\", job=~\"$job\"}, endpoint)",
@@ -770,8 +774,9 @@
       {
         "allValue": null,
         "current": {
-          "text": "GET",
-          "value": "GET"
+          "selected": false,
+          "text": "All",
+          "value": "$__all"
         },
         "datasource": "$datasource",
         "definition": "label_values(service_http_request_count_total, method)",
@@ -795,8 +800,9 @@
       {
         "allValue": null,
         "current": {
-          "text": "200",
-          "value": "200"
+          "selected": false,
+          "text": "All",
+          "value": "$__all"
         },
         "datasource": "$datasource",
         "definition": "label_values(service_http_request_count_total, status)",
@@ -820,9 +826,9 @@
       {
         "allValue": null,
         "current": {
-          "tags": [],
-          "text": "0.95",
-          "value": "0.95"
+          "selected": true,
+          "text": "0.75",
+          "value": "0.75"
         },
         "hide": 0,
         "includeAll": false,
@@ -831,12 +837,12 @@
         "name": "quantile",
         "options": [
           {
-            "selected": true,
+            "selected": false,
             "text": "0.95",
             "value": "0.95"
           },
           {
-            "selected": false,
+            "selected": true,
             "text": "0.75",
             "value": "0.75"
           },
@@ -853,7 +859,7 @@
     ]
   },
   "time": {
-    "from": "now-30m",
+    "from": "now-5m",
     "to": "now"
   },
   "timepicker": {
@@ -881,7 +887,7 @@
     ]
   },
   "timezone": "browser",
-  "title": "Prometheus Service",
+  "title": "GinTest",
   "uid": "EyaoypOZz",
-  "version": 18
+  "version": 9
 }

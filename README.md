@@ -6,7 +6,7 @@
 ### 🔰 Installation
 
 ```shell
-$ go get -u github.com/chenjiandongx/ginprom
+$ go get -u github.com/feixiao/ginprom
 ```
 
 ### 📝 Usage
@@ -15,7 +15,7 @@ It's easy to get started with ginprom, only a few lines of code needed.
 
 ```golang
 import (
-	"github.com/chenjiandongx/ginprom"
+	"github.com/feixiao/ginprom"
 	"github.com/gin-gonic/gin"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
